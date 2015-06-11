@@ -37,6 +37,24 @@ public class CalculoTest {
     @After
     public void tearDown() {
     }
+    /**
+     * Test of getMensajeResultado method, of class Calculo.
+     */
+    @Test
+    public void testGetMensajeResultado() {
+        Calculo instance = new Calculo();
+        instance.setNumero1(-15);
+        System.out.println("Test mensaje nume1 negativo:" + instance.getMensajeResultado());
+        instance.setNumero2(-5);
+        System.out.println("Test mensaje nume2 negativo:" + instance.getMensajeResultado());
+        int result = instance.obtenerMCD(40, 10);
+        assertEquals(10, result, 0);
+        System.out.println("Test mensaje operacion correcta:" + instance.getMensajeResultado());
+        result = instance.obtenerMCD(0, 0);
+        assertEquals(0, result, 0);
+        System.out.println("Test mensaje operacion invalida:" + instance.getMensajeResultado());
+
+    }
 
     /**
      * Test of obtenerMCD method, of class Calculo.
