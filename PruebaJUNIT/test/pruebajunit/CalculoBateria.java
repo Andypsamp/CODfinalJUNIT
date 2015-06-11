@@ -61,7 +61,7 @@ public class CalculoBateria {
    @Test
    public void testPrimeNumberChecker() {
       System.out.println("Testing bateria: " + num1 + " " + num2 + " Resultado de Testing -> " + result);
-      int result = calculobj.obtenerMCD(num1,num2);
+      int resulta = calculobj.obtenerMCD(num1,num2);
       assertEquals(result, result);
    }
 }
