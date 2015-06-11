@@ -22,12 +22,29 @@ public class CalculoBateria {
     private Calculo calculobj;
     
     /**
-     * Clase de prueba
+     * Clase de pruebas inicializada
      */
     @Before
- public void init(){
+ public void inicializada(){
      calculobj=new Calculo();
  }
-    
+ /**
+  * Creamos un constructor con parametros
+  * @param nume1 q es el primer dato q incertaremos
+  * @param nume2 es el segundo dato q incertaremos
+  * @param resulta es el resultado esperado
+  */
+    public CalculoBateria(int nume1,int nume2,int resulta){
+        this.num1=nume1;
+        this.num2=nume2;
+        this.result=resulta;
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     
 }
