@@ -44,7 +44,10 @@ public class CalculoBateria {
         this.result=resulta;
     }
     
-    
+    /**
+     * Donde meteremos los datos q queremos testear
+     * @return array bateria
+     */
     
  @Parameterized.Parameters
  public static Collection datos(){
