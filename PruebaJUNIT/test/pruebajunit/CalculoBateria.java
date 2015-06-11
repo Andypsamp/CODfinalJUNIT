@@ -5,8 +5,12 @@
  */
 package pruebajunit;
 
+import java.util.Arrays;
+import java.util.Collection;
 import mcd.Calculo;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -39,12 +43,29 @@ public class CalculoBateria {
         this.num2=nume2;
         this.result=resulta;
     }
- 
- 
- 
- 
- 
- 
- 
     
+    
+    
+ @Parameterized.Parameters
+ public static Collection datos(){
+    return Arrays.asList(new Object[][]{
+        {40,10,10},
+        {10,2,2},
+        {60,10,10},
+ });  
 }
+
+   @Test
+   public void testPrimeNumberChecker() {
+      System.out.println("Testing bateria: " + num1 + " " + num2 + " Resultado de Testing -> " + result);
+      int result = calculobj.obtenerMCD(num1,num2);
+      assertEquals(result, result);
+   }
+}
+
+
+
+
+
+
+
